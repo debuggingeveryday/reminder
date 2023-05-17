@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import {View, Text} from 'react-native';
 import {IProps, IState} from 'types-modules';
 
 class App extends React.Component<IProps, IState> {
@@ -8,7 +8,13 @@ class App extends React.Component<IProps, IState> {
   }
 
   render() {
-    return <View></View>;
+    const backgroundStyle = 'bg-neutral-300 dark:bg-slate-900';
+
+    return (
+      <View className={backgroundStyle}>
+        <Text className="text-2xl text-black dark:text-white">Test</Text>
+      </View>
+    );
   }
 }
 
